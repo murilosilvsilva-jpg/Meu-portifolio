@@ -4,7 +4,7 @@
     --fonte-primaria: "Inter", sans-serif;
 
     /* bg */
-    --bg-primario: #B3B3B3;
+    --bg-primario: #ebebeb;
     --bg-secundario: #FFFFFF;
 
     --bg-button-primario: #0071E3;
@@ -94,6 +94,7 @@ header ul li a{
     align-items: center;
     justify-content: center;
 
+    background-color: var(--bg-primario);
     text-align: center;
     height: 90dvh;
     padding: .5rem;
@@ -103,6 +104,7 @@ header ul li a{
     font-size: clamp(3rem, 5vw, 5rem);
     /* clamp(valor-mininmo, valor-preferido, valor maximo); */
     margin-bottom: 1rem;
+    
 }
 
 .hero-section p{
@@ -120,7 +122,8 @@ header ul li a{
     gap: 1rem;
 }
 
-.hero-section a{
+/* configuração de button */
+.hero-section a, form button{
     height: 3rem;
     width: 100%;
     
@@ -131,7 +134,8 @@ header ul li a{
     border-radius: 3rem;
 }
 
-.hero-section ul li:first-child a{
+/* cor do button */
+.hero-section ul li:first-child a, form button{
     background-color: var(--bg-button-primario);
     color: var(--cor-texto-button-primatio);
 }
@@ -148,18 +152,18 @@ header ul li a{
     background-color: var(--bg-secundario);
 }
 
-.sobre-section, .projetos-section{
+.sobre-section, .projetos-section, .contato-section{
     padding: 6rem 1rem;
     text-align: center;
 }
 
-.sobre-section h2, .projetos-section h2{
+.sobre-section h2, .projetos-section h2, .contato-section h2{
     color: var(--cor-texto-titulo);
     font-size: clamp(2.5rem, 5vw, 3rem);
-    margin-bottom: 50%;
+    margin-bottom: 40%;
 }
 
-.sobre-section p, .projetos-section p{
+.sobre-section p, .projetos-section p, .contato-section p{
     margin-bottom: 1rem;
     font-size: clamp(1.125rem, 3vw, 1.125rem);
     line-height: 1.5;
@@ -221,4 +225,69 @@ header ul li a{
     justify-content: center;
 
     border-radius: 1.5rem;
+ }
+
+ /* Section Contato */
+
+ .contato-section form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--bg-secundario);
+    padding: .875rem 1rem;
+    border-radius: 1.5rem;
+ }
+
+ form input, form textarea{
+    margin-bottom: 1rem;
+    margin-top: .25rem;
+    background-color: var(--bg-primario);
+
+    font-family: var(--fonte-primaria);
+ }
+
+ form textarea{
+    height: 20rem;
+ }
+
+ form label{
+    font-size: 1rem;
+    color: var(--cor-texto-button-secundario);
+ }
+
+ form input,form textarea, form button{
+    border-radius: 1.25rem;
+    border: none;
+    padding: .625rem 1rem;
+    font-size: 1rem;
+ }
+
+ form input{
+    height: 3rem;
+ }
+
+ /* footer  */
+ footer{
+    padding: 1rem;
+    background-color: var(--bg-secundario);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+ }
+
+ footer ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+ }
+
+ footer a{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: .25rem;
+
+    color: var(--cor-texto-paragrafo);
  }
